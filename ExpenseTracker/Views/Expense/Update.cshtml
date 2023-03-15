@@ -1,0 +1,61 @@
+﻿@model ExpenseTracker.Models.Expense
+@{
+    ViewData["Title"] = "Details";
+}
+<form asp-action="Update">
+
+<h1>Expense Details</h1>
+<div class="row">
+    <div class="col-3">
+            
+        @Html.DisplayNameFor(model=>model.Id)
+    </div>
+    <div class="col-9">
+        @Html.DisplayFor(model=>model.Id)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        @Html.DisplayNameFor(model=>model.Name)
+    </div>
+    <div class="col-9">
+            <input asp-for="Name" class="form-control" />
+       @*//@Html.DisplayFor(model=>model.Name)*@
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        @Html.DisplayNameFor(model=>model.Amount)
+    </div>
+    <div class="col-9">
+            <input asp-for="Amount" class="form-control" />
+       @* @Html.DisplayFor(model=>model.Amount)*@
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        @Html.DisplayNameFor(model=>model.CreatedDate)
+    </div>
+    <div class="col-9">
+            <input asp-for="Amount" class="form-control" />
+        @*@Html.DisplayFor(model=>model.CreatedDate)*@
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col-9">
+        @*<a asp-action="Edit" value="submit" class="btn btn-primary">Save</a>*@
+            <input type="submit" asp-action="Update" value="Update" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-danger">Back To List</a>
+    </div>
+</div>
+</form>
+
+
+
+
